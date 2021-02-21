@@ -32,47 +32,12 @@ class _MyHomePageState extends State<MyHomePage> {
   String it = 'RD';
 
   void _incrementCounter() {
-    if (_counter == 1) {
-      setState(() {
-        it = "ST";
-      });
-    } else if (_counter == 2) {
-      setState(() {
-        it = "ND";
-      });
-    } else if (_counter == 3) {
-      setState(() {
-        it = "RD";
-      });
-    } else {
-      setState(() {
-        it = "TH";
-      });
-    }
     setState(() {
       _counter++;
     });
   }
 
   void _decrementCounter() {
-    if (_counter == 1) {
-      setState(() {
-        it = "ST";
-      });
-    } else if (_counter == 2) {
-      setState(() {
-        it = "ND";
-      });
-    } else if (_counter == 3) {
-      setState(() {
-        it = "RD";
-      });
-    } else {
-      setState(() {
-        it = "TH";
-      });
-    }
-
     if (_counter < 0) {
       setState(() {
         _counter = 0;
@@ -145,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               color: Color.fromRGBO(0, 122, 255, 1),
                             ),
                             onPressed: () {
-                              _decrementCounter();
+                              // _decrementCounter();
                             }),
                         SizedBox(width: 10),
                         mainBord(context, _counter, it),
